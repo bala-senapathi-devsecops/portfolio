@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="DevSecOps Engineer specializing in AWS, Kubernetes, CI/CD, MLOps and AIOps platforms." />
+    <meta name="keywords" content="DevSecOps, AWS, Kubernetes, MLOps, AIOps, Terraform, CI/CD" />
+    <meta property="og:title" content="Bala Senapathi | DevSecOps Portfolio" />
+    <meta property="og:description" content="DevSecOps Engineer specializing in AWS, Kubernetes, CI/CD, MLOps and AIOps platforms." />
+    <meta property="og:url" content="https://your-github-pages-link.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://your-domain.com/profile.jpg" />
+    <meta name="author" content="Bala Senapathi" />
+    <title>Bala Senapathi DevSecOps Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="profile.jpg">
+    <style>
+        :root{
+          --card:rgba(2,6,23,0.75);
+          --text:#e2e8f0;
+          --muted:#94a3b8;
+          --accent:#38bdf8;
+          --radius:16px;
+          --shadow:0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+          font-family:Arial, sans-serif;
+        }
+
+        body{
+          background:radial-gradient(circle at top, #0f172a, #020617);
+          color:var(--text);
+          line-height:1.6;
+        }
+
+        html{ scroll-behavior:smooth; }
+
+        /* NAVBAR */
+        .navbar{
+          position:sticky;
+          top:0;
+          background:rgba(255,255,255,0.05);
+          backdrop-filter:blur(14px);
+          border-bottom:1px solid rgba(255,255,255,0.08);
+          padding:12px 0;
+          z-index:1000;
+        }
+
+        .navbar ul{
+          display:flex;
+          justify-content:center;
+          gap:12px;
+          list-style:none;
+          flex-wrap:wrap;
+        }
+
+        .navbar a{
+          padding:8px 16px;
+          border-radius:999px;
+          text-decoration:none;
+          color:var(--text);
+          background:rgba(2,6,23,0.4);
+          border:1px solid rgba(255,255,255,0.12);
+          transition:0.3s;
+        }
+
+        .navbar a:hover{
+          transform:translateY(-2px);
+          border-color:var(--accent);
+          color:var(--accent);
+        }
+
+        /* LAYOUT */
+        .container{
+          max-width:1100px;
+          margin:auto;
+          padding:0 20px;
+        }
+
+        section{
+          padding:90px 0;
+        }
+
+        /* TYPOGRAPHY */
+        h1{ font-size:2.8rem; margin-bottom:10px; }
+        h2{ font-size:1.8rem; margin-bottom:20px; }
+        h3{ margin-bottom:10px; }
+
+        /* HERO */
+        .hero{
+          display:grid;
+          grid-template-columns:1.2fr 0.8fr;
+          gap:50px;
+          align-items:center;
+        }
+
+        .hero img{
+          width:100%;
+          max-width:320px;
+          height:auto;
+          border-radius:50%;
+          border:3px solid var(--accent);
+          box-shadow:0 0 40px rgba(56,189,248,0.25);
+        }
+
+        /* BUTTON */
+        .btn{
+          padding:10px 16px;
+          border:1px solid var(--accent);
+          border-radius:10px;
+          color:var(--text);
+          text-decoration:none;
+          transition:0.3s;
+          display:inline-block;
+        }
+
+        .btn:hover{
+          background:var(--accent);
+          color:#000;
+        }
+
+        .btn-center{
+          display:flex;
+          justify-content:center;
+          margin-top:20px;
+        }
+
+        /* GRID */
+        .grid{
+          display:grid;
+          grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+          gap:18px;
+        }
+
+        /* CARD */
+        .card{
+          background:var(--card);
+          border:1px solid rgba(255,255,255,0.08);
+          padding:18px;
+          border-radius:var(--radius);
+          box-shadow:var(--shadow);
+          transition:0.3s;
+        }
+
+        .card p{
+          word-break:break-word;
+        }
+
+        .card:hover{
+          transform:translateY(-8px);
+          border-color:var(--accent);
+        }
+
+        /* TAGS */
+        .tag{
+          display:inline-block;
+          margin:6px 6px 0 0;
+          padding:4px 10px;
+          border-radius:8px;
+          font-size:12px;
+          border:1px solid var(--accent);
+          color:var(--muted);
+        }
+
+        /* EMAIL */
+        .email{
+          background:linear-gradient(90deg,#38bdf8,#a78bfa,#22c55e);
+          -webkit-background-clip:text;
+          -webkit-text-fill-color:transparent;
+          font-weight:600;
+        }
+
+        /* FOOTER */
+        footer{
+          text-align:center;
+          padding:50px 20px;
+          border-top:1px solid rgba(255,255,255,0.1);
+          color:var(--muted);
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+          .hero{ grid-template-columns:1fr; text-align:center; }
+          .hero img{ width:260px; height:260px; }
+        }
+
+        p{
+          line-height:1.7;
+        }
+
+        #about p{
+          margin-bottom:16px;
+        }
+
+        /* PROJECT SPACING (IMPORTANT FIX) */
+        .project-block{
+          margin-bottom:90px;
+        }
+
+        @media(max-width:500px){
+          .navbar ul{
+            gap:6px;
+            font-size:12px;
+        }
+
+          .btn{
+            display:block;
+            margin:8px auto;
+            text-align:center;
+          }
+        }
+
+        img{
+          max-width:100%;
+          height:auto;
+        }
+
+        .metrics-box{
+          margin-top:15px;
+          padding:12px 16px;
+          border-left:4px solid #22c55e;
+          background:rgba(34,197,94,0.05);
+          border-radius:10px;
+          line-height:1.6;
+        }
+
+        .metrics-box span{
+          display:block;
+          color:#22c55e;
+          font-weight:500;
+        }
+
+        /* CONTAINER */
+        .impact-container{
+          margin-top:15px;
+          display:flex;
+          flex-wrap:wrap;
+          gap:10px;
+        }
+
+        /* BADGES */
+        .impact-badge{
+          padding:8px 14px;
+          border-radius:999px;
+          font-size:14px;
+          background:rgba(56,189,248,0.08);
+          border:1px solid rgba(56,189,248,0.4);
+          color:#e2e8f0;
+
+          opacity:0;
+          transform:translateY(15px);
+          animation:badgeFade 0.6s ease forwards;
+        }
+
+        /* STAGGERED ANIMATION */
+        .impact-badge:nth-child(1){ animation-delay:0.2s; }
+        .impact-badge:nth-child(2){ animation-delay:0.4s; }
+        .impact-badge:nth-child(3){ animation-delay:0.6s; }
+        .impact-badge:nth-child(4){ animation-delay:0.8s; }
+
+        /* HOVER EFFECT */
+        .impact-badge:hover{
+          transform:translateY(-3px) scale(1.05);
+          border-color:#38bdf8;
+          box-shadow:0 0 12px rgba(56,189,248,0.4);
+        }
+
+        /* KEYFRAME */
+        @keyframes badgeFade{
+          to{
+             opacity:1;
+             transform:translateY(0);
+          }
+        }
+
+        .primary{
+          border-color:#38bdf8;
+          background:rgba(56,189,248,0.15);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<div class="container">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div>
+            <h1 style="color:white;">Bala Senapathi</h1>
+
+            <h2 style="color:#38bdf8;">
+                DevSecOps | MLOps | AIOps Engineer
+            </h2>
+
+            <p style="color:#94a3b8;">
+                DevSecOps Engineer specializing in cloud-native systems on AWS and Kubernetes, with a focus on CI/CD automation, scalable infrastructure, and production-grade MLOps and AIOps platforms.
+            </p>
+
+            <div class="impact-container">
+                <span class="impact-badge primary">🚀 80% faster deployments</span>
+                <span class="impact-badge primary">⚡ 99.9% uptime</span>
+                <span class="impact-badge">🤖 MLOps | 🔍 AIOps systems</span>
+            </div>
+
+            <div style="margin-top:20px;">
+                <a class="btn" href="https://github.com/balusena" target="_blank">GitHub</a>
+                <a class="btn" href="https://linkedin.com/in/bala-senapathi" target="_blank">LinkedIn</a>
+                <a class="btn" href="#projects">View Projects</a>
+            </div>
+        </div>
+
+        <div>
+            <img src="images/profile.jpg" alt="Profile" loading="lazy">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+
+        <p style="color:#94a3b8;">
+            DevSecOps Engineer specializing in AWS, Kubernetes, and cloud-native platform engineering. I build secure, scalable, and automated infrastructure for production systems.
+        </p>
+
+        <p style="color:#94a3b8;">
+            I design and implement end-to-end CI/CD pipelines, observability systems, and production-grade automation across DevSecOps, MLOps, and AIOps environments.
+        </p>
+
+        <p style="color:#94a3b8;">
+            Passionate about designing self-healing and observable systems that accelerate deployments while enhancing resilience and operational efficiency in production environments.
+        </p>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Cloud Platforms:</h3>
+                <p style="color:#38bdf8;">AWS | EC2 | VPC | EKS | ECR | IAM | Route53 | S3 | WAF | Lambda | KMS | SSM | RDS | ElastiCache | DocumentDB</p>
+            </div>
+
+            <div class="card">
+                <h3>CI/CD & Artifact Management:</h3>
+                <p style="color:#38bdf8;">Jenkins | GitHub Actions | ArgoCD | SonarQube | Sonatype Nexus Repository </p>
+            </div>
+
+            <div class="card">
+                <h3>Version Control & Secret Management:</h3>
+                <p style="color:#38bdf8;">Git | GitHub | Vault</p>
+            </div>
+
+            <div class="card">
+                <h3>Automation & Scripting:</h3>
+                <p style="color:#38bdf8;">Ansible | Terraform | Python | SQL | Bash</p>
+            </div>
+
+            <div class="card">
+                <h3>Containerization & Orchestration:</h3>
+                <p style="color:#38bdf8;">Docker | Kubernetes | Helm</p>
+            </div>
+
+            <div class="card">
+                <h3>Messaging & Streaming:</h3>
+                <p style="color:#38bdf8;">RabbitMQ | Istio | Kafka</p>
+            </div>
+
+            <div class="card">
+                <h3>Databases:</h3>
+                <p style="color:#38bdf8;">MySQL | PostgreSQL | MongoDB | Redis</p>
+            </div>
+
+            <div class="card">
+                <h3>Operating Systems:</h3>
+                <p style="color:#38bdf8;">Linux | Windows</p>
+            </div>
+
+            <div class="card">
+                <h3>Monitoring & Observability:</h3>
+                <p style="color:#38bdf8;">Prometheus | Grafana | ELK Stack | New Relic</p>
+            </div>
+
+            <div class="card">
+                <h3>MLOps:</h3>
+                <p style="color:#38bdf8;">MLflow | Airflow | DVC | PostgreSQL | Kubernetes | KServe |Evidently AI</p>
+            </div>
+
+            <div class="card">
+                <h3>AIOps:</h3>
+                <p style="color:#38bdf8;">ML-based Anomaly Detection | Kafka | Observability Data Integration</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>🚀Projects</h2>
+
+        <!-- DEVSECOPS -->
+        <h3 style="color:#38bdf8; margin-top:40px;">☁️ Cloud-Native End-to-End DevSecOps Platform:</h3>
+
+        <p style="color:#94a3b8;">
+            End-to-end AWS DevSecOps platform for microservices, built using Terraform and Packer for infrastructure provisioning, GitHub Actions for CI/CD, ArgoCD and Helm for GitOps deployments, Istio and Vault for service mesh security, Kubernetes autoscaling (HPA + Cluster Autoscaler), and Prometheus, Grafana, ELK, and New Relic for full observability under load-tested production-like conditions.
+        </p>
+
+        <div class="metrics-box">
+            <span>✔ Reduced deployment time from 30 mins to 8 mins (≈70%)</span>
+            <span>✔ Enabled zero-downtime deployments using GitOps (ArgoCD)</span>
+            <span>✔ Improved system uptime to 99.9% with autoscaling & monitoring</span>
+            <span>✔ Reduced manual deployment effort by 80%</span>
+        </div>
+
+        <img src="images/roboshop_architecture.jpg"
+             alt="DevSecOps Architecture"
+             loading="lazy"
+             style="width:90%; max-width:950px; max-height:650px; height:auto; display:block; margin:30px auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.3);" />
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>CI/CD and GitOps</h3>
+                <p style="color:#94a3b8;">GitHub Actions, ArgoCD, Helm automation.</p>
+                <span style="color:#38bdf8;" class="tag">GitHub Actions</span>
+                <span style="color:#38bdf8;" class="tag">ArgoCD</span>
+                <span style="color:#38bdf8;" class="tag">Helm</span>
+                <span style="color:#38bdf8;" class="tag">Git</span>
+            </div>
+
+            <div class="card">
+                <h3>Infrastructure</h3>
+                <p style="color:#94a3b8;">Terraform, Packer AWS EKS provisioning.</p>
+                <span style="color:#38bdf8;" class="tag">Terraform</span>
+                <span style="color:#38bdf8;" class="tag">Ansible</span>
+                <span style="color:#38bdf8;" class="tag">Docker</span>
+                <span style="color:#38bdf8;" class="tag">ECR</span>
+                <span style="color:#38bdf8;" class="tag">EKS</span>
+            </div>
+
+            <div class="card">
+                <h3>Security</h3>
+                <p style="color:#94a3b8;">Vault, Istio mTLS, AWS KMS encryption.</p>
+                <span style="color:#38bdf8;" class="tag">Vault</span>
+                <span style="color:#38bdf8;" class="tag">Istio</span>
+                <span style="color:#38bdf8;" class="tag">IAM</span>
+                <span style="color:#38bdf8;" class="tag">KMS</span>
+                <span style="color:#38bdf8;" class="tag">Route53</span>
+            </div>
+
+            <div class="card">
+                <h3>Observability</h3>
+                <p style="color:#94a3b8;">Prometheus, Grafana, ELK, New Relic stack.</p>
+                <span style="color:#38bdf8;" class="tag">Prometheus</span>
+                <span style="color:#38bdf8;" class="tag">Grafana</span>
+                <span style="color:#38bdf8;" class="tag">ELK</span>
+                <span style="color:#38bdf8;" class="tag">New Relic</span>
+            </div>
+
+        </div>
+
+        <div class="btn-center">
+            <a class="btn" href="https://github.com/balusena/aws-devsecops-end-to-end-platform" target="_blank">
+                View DevSecOps Project
+            </a>
+        </div>
+
+        <!-- MLOPS -->
+        <div style="height:60px;"></div>
+        <h3 style="color:#38bdf8; margin-top:50px;">🤖 End-to-End MLOps Platform:</h3>
+
+        <p style="color:#94a3b8;">
+            End-to-end production-grade MLOps pipeline for house price prediction, designed with modular pipelines for feature engineering, training, and inference, integrated with MLflow for experiment tracking and model versioning, containerized using Docker, and deployed on AWS ECS (Fargate) with ECR and S3, with CI/CD automation via GitHub Actions, microservices architecture using FastAPI and Streamlit, and robust testing (pytest) to deliver a scalable, reproducible, and reliable ML system.
+        </p>
+
+        <div class="metrics-box">
+            <span>✔ Reduced model deployment time by 60% using CI/CD pipelines</span>
+            <span>✔ Built reproducible ML pipelines improving workflow efficiency</span>
+            <span>✔ Automated end-to-end ML lifecycle from training to deployment</span>
+            <span>✔ Reduced training-to-inference cycle from hours to minutes</span>
+        </div>
+
+        <img src="images/mlops_architecture.jpg"
+             alt="MLOps Architecture"
+             loading="lazy"
+             style="width:90%; max-width:1000px; max-height:1000px; height:auto; display:block; margin:30px auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.3);" />
+
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>ML Pipeline</h3>
+                <p style="color:#94a3b8;">Training, validation, preprocessing pipelines using MLflow.</p>
+                <span style="color:#38bdf8;" class="tag">Python</span>
+                <span style="color:#38bdf8;" class="tag">MLflow</span>
+                <span style="color:#38bdf8;" class="tag">Airflow</span>
+            </div>
+
+            <div class="card">
+                <h3>Deployment</h3>
+                <p style="color:#94a3b8;">Kubernetes-based ML model deployment with CI/CD.</p>
+                <span style="color:#38bdf8;" class="tag">Docker</span>
+                <span style="color:#38bdf8;" class="tag">Kubernetes</span>
+                <span style="color:#38bdf8;" class="tag">AWS</span>
+            </div>
+
+            <div class="card">
+                <h3>Tracking</h3>
+                <p style="color:#94a3b8;">Experiment tracking & model registry.</p>
+                <span style="color:#38bdf8;" class="tag">MLflow</span>
+                <span style="color:#38bdf8;" class="tag">S3</span>
+                <span style="color:#38bdf8;" class="tag">DVC</span>
+                <span style="color:#38bdf8;" class="tag">PostgreSQL</span>
+            </div>
+
+            <div class="card">
+                <h3>Monitoring</h3>
+                <p style="color:#94a3b8;">Model drift and performance monitoring.</p>
+                <span style="color:#38bdf8;" class="tag">Prometheus</span>
+                <span style="color:#38bdf8;" class="tag">Grafana</span>
+                <span style="color:#38bdf8;" class="tag">Evidently AI</span>
+            </div>
+
+        </div>
+
+        <div class="btn-center">
+            <a class="btn" href="https://github.com/balusena/mlops-aiops-dataops-gitops/tree/main/mlops_end_to_end_project" target="_blank">
+                View MLOps Project
+            </a>
+        </div>
+
+
+        <!-- AIOPS -->
+        <div style="height:60px;"></div>
+        <h3 style="color:#38bdf8; margin-top:50px;">📊 End-to-End AIOps Platform</h3>
+
+        <p style="color:#94a3b8;">
+            A real-time AIOps platform that simulates microservice telemetry, streams data through Kafka, and detects anomalies using machine learning. Built with Python and powered by an observability stack including Prometheus, Grafana, OpenTelemetry, and Jaeger, the system enables real-time monitoring, anomaly detection, and alerting via Slack and PagerDuty.
+        </p>
+
+        <div class="metrics-box">
+            <span>✔ Reduced anomaly detection latency to under 200ms</span>
+            <span>✔ Processed real-time telemetry data using Kafka streaming</span>
+            <span>✔ Automated alerting reducing incident response time</span>
+            <span>✔ Enabled real-time monitoring across distributed systems</span>
+        </div>
+
+        <img src="images/aiops_architecture.jpg"
+             alt="AIOps Architecture"
+             loading="lazy"
+             style="width:90%; max-width:1000px; max-height:1000px; height:auto; display:block; margin:30px auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.3);" />
+
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Observability</h3>
+                <p style="color:#94a3b8;">Metrics, logs, traces unified monitoring system with real-time streaming ingestion.</p>
+                <span style="color:#38bdf8;" class="tag">Prometheus</span>
+                <span style="color:#38bdf8;" class="tag">Grafana</span>
+                <span style="color:#38bdf8;" class="tag">ELK</span>
+                <span style="color:#38bdf8;" class="tag">Apache Kafka</span>
+                <span style="color:#38bdf8;" class="tag">OpenTelemetry</span>
+            </div>
+
+            <div class="card">
+                <h3>Anomaly Detection</h3>
+                <p style="color:#94a3b8;">Machine learning-based detection of infrastructure anomalies from streaming data.</p>
+                <span style="color:#38bdf8;" class="tag">Python</span>
+                <span style="color:#38bdf8;" class="tag">Pandas</span>
+                <span style="color:#38bdf8;" class="tag">Scikit-learn</span>
+                <span style="color:#38bdf8;" class="tag">Isolation Forest</span>
+            </div>
+
+            <div class="card">
+                <h3>Incident Automation</h3>
+                <p style="color:#94a3b8;">Automated alerting and incident response workflows with real-time notifications.</p>
+                <span style="color:#38bdf8;" class="tag">Kafka</span>
+                <span style="color:#38bdf8;" class="tag">Alertmanager</span>
+                <span style="color:#38bdf8;" class="tag">Slack</span>
+                <span style="color:#38bdf8;" class="tag">PagerDuty</span>
+            </div>
+
+            <div class="card">
+                <h3>Root Cause Analysis</h3>
+                <p style="color:#94a3b8;">Correlation of logs, metrics, and traces to identify system failures and root causes.</p>
+                <span style="color:#38bdf8;" class="tag">Elasticsearch</span>
+                <span style="color:#38bdf8;" class="tag">Kibana</span>
+                <span style="color:#38bdf8;" class="tag">Python</span>
+                <span style="color:#38bdf8;" class="tag">Jaeger</span>
+            </div>
+
+        </div>
+
+        <div class="btn-center">
+            <a class="btn" href="https://github.com/balusena/aiops-end-to-end-platform" target="_blank">
+                View AIOps Project
+            </a>
+        </div>
+
+    </section>
+
+</div>
+
+<!-- CONTACT -->
+<footer id="contact">
+
+    <h2>Contact</h2>
+    <p>Email: <span class="email">balusena12@gmail.com</span></p>
+
+    <div style="margin-top:15px;">
+        <a class="btn" href="https://github.com/balusena">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/bala-senapathi">LinkedIn</a>
+    </div>
+
+    <p style="margin-top:20px;">
+        © 2026 Bala Senapathi. All rights reserved. Built with DevSecOps principles.
+    </p>
+
+</footer>
+
+</body>
+</html>
